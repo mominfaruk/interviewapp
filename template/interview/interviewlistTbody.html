@@ -1,0 +1,14 @@
+{% for list in all_list %}
+<tr id="list{{ list.id }}">
+    <td>{{list.title}}</td>
+
+    <td>{{list.date}}</td>
+    <td>
+        <a onclick="editInterview({{ list.id }})" href=" #editEmployeeModal" class="edit" data-toggle="modal"><i
+                class=" material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+        <a class="  btn btn-danger btn
+                                custom_btn
+                                confirm-delete" onclick="deleteInterview({{ list.id }})"><i class="
+            material-icons" title="Delete">&#xE872;</i> </a>
+</tr>
+{% endfor %}
